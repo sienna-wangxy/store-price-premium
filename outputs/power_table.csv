@@ -1,0 +1,13 @@
+question,assumed effect,effect size,products needed
+co-op vs chain (paired t-test),pilot dz,1.18,8
+co-op vs chain (paired t-test),half of pilot,0.59,25
+co-op vs chain (paired t-test),medium (0.5),0.5,34
+co-op vs chain (paired t-test),small (0.3),0.3,90
+small store vs chain (paired t-test),pilot dz,1.62,6
+small store vs chain (paired t-test),half of pilot,0.81,15
+small store vs chain (paired t-test),medium (0.5),0.5,34
+small store vs chain (paired t-test),small (0.3),0.3,90
+beer vs snack premium (interaction),pilot d,0.85,23 per category
+beer vs snack premium (interaction),half of pilot,0.43,88 per category
+beer vs snack premium (interaction),large (0.8),0.8,26 per category
+beer vs snack premium (interaction),medium (0.5),0.5,64 per category

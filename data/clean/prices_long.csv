@@ -1,0 +1,68 @@
+item,brand,product,category,store,store_type,regular_price,sale_price,member_price,shelf,substitute,note,paid_price,found
+Hu chocolate | Almond butter + puffed quinoa dark chocolate,Hu chocolate,Almond butter + puffed quinoa dark chocolate,snack bar,Durham Co-op,co-op,5.99,4.49,,middle,False,,4.49,True
+RXBAR | Bluberry,RXBAR,Bluberry,snack bar,Durham Co-op,co-op,2.99,2.0,,middle,False,,2.0,True
+"Kettle brand | Sour cream and onion, 5 oz",Kettle brand,"Sour cream and onion, 5 oz",snack,Durham Co-op,co-op,4.69,,,middle,False,,4.69,True
+"Organic Valley | Organic 2%, 64 fz",Organic Valley,"Organic 2%, 64 fz",dairy,Durham Co-op,co-op,6.69,,,middle,False,,6.69,True
+"Annie's | Organic classic cheddar pasta, 6 oz",Annie's,"Organic classic cheddar pasta, 6 oz",pantry,Durham Co-op,co-op,4.99,,,top,False,,4.99,True
+"Annie's | Classic cheddar pasta, 6 oz",Annie's,"Classic cheddar pasta, 6 oz",pantry,Durham Co-op,co-op,3.69,,,top,False,,3.69,True
+Jovial | Gf penne,Jovial,Gf penne,pantry,Durham Co-op,co-op,5.99,,,top,False,,5.99,True
+Jovial | Gf elbows,Jovial,Gf elbows,pantry,Durham Co-op,co-op,5.99,,,top,False,,5.99,True
+RXBAR | Peanut butter,RXBAR,Peanut butter,snack bar,Durham Co-op,co-op,2.99,2.0,,middle,False,,2.0,True
+Big Spoon | Cherry chocolate,Big Spoon,Cherry chocolate,snack bar,Durham Co-op,co-op,2.75,,,mid to top,False,,2.75,True
+Big Spoon | Apricot pepita,Big Spoon,Apricot pepita,snack bar,Durham Co-op,co-op,2.75,,,mid to top,False,,2.75,True
+"Luna | Bluberry, 1.69 oz",Luna,"Bluberry, 1.69 oz",snack bar,Durham Co-op,co-op,1.99,,,mid to bottom,False,,1.99,True
+"Luna | Lemon zest, 1.69",Luna,"Lemon zest, 1.69",snack bar,Durham Co-op,co-op,1.99,,,mid to bottom,False,,1.99,True
+Pisgah | 6 pack pale ale,Pisgah,6 pack pale ale,beer,Durham Co-op,co-op,13.99,,,bottom,False,,13.99,True
+"Ponysaurus | Biere de garde, 6 pk",Ponysaurus,"Biere de garde, 6 pk",beer,Durham Co-op,co-op,12.99,,,mid to bottom,False,,12.99,True
+Sierra Nevada | Pale ale 12 pk,Sierra Nevada,Pale ale 12 pk,beer,Durham Co-op,co-op,22.99,,,bottom,False,,22.99,True
+"Blue Ribbon | Narragansett, 12 pk lager cans",Blue Ribbon,"Narragansett, 12 pk lager cans",beer,Durham Co-op,co-op,14.99,,,bottom,False,,14.99,True
+RXBAR | Bluberry,RXBAR,Bluberry,snack bar,Gazelle,small store,2.89,,,,True,Diff flavor,2.89,True
+RXBAR | Peanut butter,RXBAR,Peanut butter,snack bar,Gazelle,small store,2.89,,,,False,,2.89,True
+Big Spoon | Cherry chocolate,Big Spoon,Cherry chocolate,snack bar,Gazelle,small store,,,,,False,,,False
+Big Spoon | Apricot pepita,Big Spoon,Apricot pepita,snack bar,Gazelle,small store,,,,,False,,,False
+"Luna | Bluberry, 1.69 oz",Luna,"Bluberry, 1.69 oz",snack bar,Gazelle,small store,,,,,False,,,False
+"Luna | Lemon zest, 1.69",Luna,"Lemon zest, 1.69",snack bar,Gazelle,small store,,,,,False,,,False
+Pisgah | 6 pack pale ale,Pisgah,6 pack pale ale,beer,Gazelle,small store,,,,,False,,,False
+"Ponysaurus | Biere de garde, 6 pk",Ponysaurus,"Biere de garde, 6 pk",beer,Gazelle,small store,,,,,False,,,False
+Sierra Nevada | Pale ale 12 pk,Sierra Nevada,Pale ale 12 pk,beer,Gazelle,small store,14.99,,,,True,IPA; 6 pack,14.99,True
+"Blue Ribbon | Narragansett, 12 pk lager cans",Blue Ribbon,"Narragansett, 12 pk lager cans",beer,Gazelle,small store,,,,,False,,,False
+Budweiser | 25 oz bud light,Budweiser,25 oz bud light,beer,Gazelle,small store,2.79,,,,False,,2.79,True
+RXBAR | Bluberry,RXBAR,Bluberry,snack bar,Bulldega,small store,,,,,False,,,False
+RXBAR | Peanut butter,RXBAR,Peanut butter,snack bar,Bulldega,small store,,,,,False,,,False
+Big Spoon | Cherry chocolate,Big Spoon,Cherry chocolate,snack bar,Bulldega,small store,3.19,,,,False,,3.19,True
+Big Spoon | Apricot pepita,Big Spoon,Apricot pepita,snack bar,Bulldega,small store,3.19,,,,False,,3.19,True
+"Luna | Bluberry, 1.69 oz",Luna,"Bluberry, 1.69 oz",snack bar,Bulldega,small store,2.99,,,,False,,2.99,True
+"Luna | Lemon zest, 1.69",Luna,"Lemon zest, 1.69",snack bar,Bulldega,small store,,,,,False,,,False
+Pisgah | 6 pack pale ale,Pisgah,6 pack pale ale,beer,Bulldega,small store,,,,,False,,,False
+"Ponysaurus | Biere de garde, 6 pk",Ponysaurus,"Biere de garde, 6 pk",beer,Bulldega,small store,17.59,,,,False,,17.59,True
+Sierra Nevada | Pale ale 12 pk,Sierra Nevada,Pale ale 12 pk,beer,Bulldega,small store,31.99,,,,False,,31.99,True
+"Blue Ribbon | Narragansett, 12 pk lager cans",Blue Ribbon,"Narragansett, 12 pk lager cans",beer,Bulldega,small store,17.59,,,,False,,17.59,True
+Budweiser | 25 oz bud light,Budweiser,25 oz bud light,beer,Bulldega,small store,,,,,False,,,False
+"Kind | Dark chocolate mocha almond, 12 oz bar",Kind,"Dark chocolate mocha almond, 12 oz bar",snack bar,Bulldega,small store,3.99,,,,False,,3.99,True
+"Kind | Peanut butter dark chocolate, 12 oz bar",Kind,"Peanut butter dark chocolate, 12 oz bar",snack bar,Bulldega,small store,2.99,,,,False,,2.99,True
+RXBAR | Bluberry,RXBAR,Bluberry,snack bar,Whole Foods,chain,2.29,1.78,1.6,,False,,1.78,True
+RXBAR | Peanut butter,RXBAR,Peanut butter,snack bar,Whole Foods,chain,2.29,1.78,1.6,,False,,1.78,True
+Big Spoon | Cherry chocolate,Big Spoon,Cherry chocolate,snack bar,Whole Foods,chain,,,,,False,,,False
+Big Spoon | Apricot pepita,Big Spoon,Apricot pepita,snack bar,Whole Foods,chain,,,,,False,,,False
+"Luna | Bluberry, 1.69 oz",Luna,"Bluberry, 1.69 oz",snack bar,Whole Foods,chain,,,,,False,,,False
+"Luna | Lemon zest, 1.69",Luna,"Lemon zest, 1.69",snack bar,Whole Foods,chain,,,,,False,,,False
+Pisgah | 6 pack pale ale,Pisgah,6 pack pale ale,beer,Whole Foods,chain,12.99,,,,False,,12.99,True
+"Ponysaurus | Biere de garde, 6 pk",Ponysaurus,"Biere de garde, 6 pk",beer,Whole Foods,chain,13.49,,,,False,,13.49,True
+Sierra Nevada | Pale ale 12 pk,Sierra Nevada,Pale ale 12 pk,beer,Whole Foods,chain,19.49,,,,False,,19.49,True
+"Blue Ribbon | Narragansett, 12 pk lager cans",Blue Ribbon,"Narragansett, 12 pk lager cans",beer,Whole Foods,chain,9.99,,,bottom,False,,9.99,True
+Budweiser | 25 oz bud light,Budweiser,25 oz bud light,beer,Whole Foods,chain,,,,,True,price note: 4.58 (11 cents / oz pack of 6 for $7.99),,False
+"Kind | Dark chocolate mocha almond, 12 oz bar",Kind,"Dark chocolate mocha almond, 12 oz bar",snack bar,Whole Foods,chain,1.66,1.49,,bottom,False,,1.49,True
+"Kind | Peanut butter dark chocolate, 12 oz bar",Kind,"Peanut butter dark chocolate, 12 oz bar",snack bar,Whole Foods,chain,1.66,1.49,,bottom,False,,1.49,True
+RXBAR | Bluberry,RXBAR,Bluberry,snack bar,Food Lion,chain,2.49,1.69,,,False,,1.69,True
+RXBAR | Peanut butter,RXBAR,Peanut butter,snack bar,Food Lion,chain,2.19,1.69,,,True,PB Chocolate,1.69,True
+Big Spoon | Cherry chocolate,Big Spoon,Cherry chocolate,snack bar,Food Lion,chain,,,,,False,,,False
+Big Spoon | Apricot pepita,Big Spoon,Apricot pepita,snack bar,Food Lion,chain,,,,,False,,,False
+"Luna | Bluberry, 1.69 oz",Luna,"Bluberry, 1.69 oz",snack bar,Food Lion,chain,,,,,False,,,False
+"Luna | Lemon zest, 1.69",Luna,"Lemon zest, 1.69",snack bar,Food Lion,chain,1.79,1.5,,,False,,1.5,True
+Pisgah | 6 pack pale ale,Pisgah,6 pack pale ale,beer,Food Lion,chain,,,,,False,,,False
+"Ponysaurus | Biere de garde, 6 pk",Ponysaurus,"Biere de garde, 6 pk",beer,Food Lion,chain,,,,,False,,,False
+Sierra Nevada | Pale ale 12 pk,Sierra Nevada,Pale ale 12 pk,beer,Food Lion,chain,20.99,,,middle,False,,20.99,True
+"Blue Ribbon | Narragansett, 12 pk lager cans",Blue Ribbon,"Narragansett, 12 pk lager cans",beer,Food Lion,chain,10.49,,,middle to bottom,False,,10.49,True
+Budweiser | 25 oz bud light,Budweiser,25 oz bud light,beer,Food Lion,chain,2.59,,,middle to too,False,,2.59,True
+"Kind | Dark chocolate mocha almond, 12 oz bar",Kind,"Dark chocolate mocha almond, 12 oz bar",snack bar,Food Lion,chain,1.79,,,,True,Caramel almond,1.79,True
+"Kind | Peanut butter dark chocolate, 12 oz bar",Kind,"Peanut butter dark chocolate, 12 oz bar",snack bar,Food Lion,chain,1.79,,,,True,Almond and sea salt,1.79,True
