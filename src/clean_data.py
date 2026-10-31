@@ -10,9 +10,12 @@ Output: data/clean/prices_long.csv   (one row = one product at one store)
         data/clean/price_table.xlsx  (rows = products, columns = stores)
 """
 
+from pathlib import Path
+
 import pandas as pd
 
 RAW_FILE = "data/raw/raw_prices.xlsx"
+GROUND_TRUTH_FILES = ["data/raw/ground_truth.xlsx", "data/raw/ground_truth.csv"]
 LONG_FILE = "data/clean/prices_long.csv"
 TABLE_FILE = "data/clean/price_table.xlsx"
 
@@ -98,6 +101,47 @@ def parse_sale_price(value):
     return to_number(text)
 
 
+def load_controls():
+    """Load one ground-truth export and coalesce the two reference sources.
+
+    Storefront takes precedence if both prices are supplied; the sources are
+    alternatives, not two observations to average. Notes describe pack sizes
+    but do not override the supplied per-good prices.
+    """
+    path = next((Path(p) for p in GROUND_TRUTH_FILES if Path(p).exists()), None)
+    if path is None:
+        raise FileNotFoundError("Expected ground_truth.xlsx or ground_truth.csv in data/raw")
+    controls = pd.read_excel(path) if path.suffix == ".xlsx" else pd.read_csv(path)
+    controls.columns = controls.columns.str.strip()
+    required = ["Brand", "Good", "Price on storefront", "Amazon / Total Wine", "Notes"]
+    missing = set(required) - set(controls.columns)
+    if missing:
+        raise ValueError(f"Missing ground-truth columns: {sorted(missing)}")
+    controls = controls.dropna(subset=["Brand", "Good"]).copy()
+    controls["brand"] = controls["Brand"].astype(str).str.strip()
+    controls["brand"] = controls["brand"].map(lambda b: BRAND_NAMES.get(b.lower(), b))
+    controls["product"] = controls["Good"].astype(str).str.strip()
+    controls["item"] = controls["brand"] + " | " + controls["product"]
+    controls["item_key"] = controls["item"].str.casefold()
+    for source, target in [("Price on storefront", "storefront_price"),
+                           ("Amazon / Total Wine", "amazon_total_wine_price")]:
+        controls[target] = pd.to_numeric(controls[source], errors="raise")
+        if (controls[target].dropna() <= 0).any():
+            raise ValueError(f"Control prices must be positive: {source}")
+    controls["control_price"] = controls["storefront_price"].combine_first(
+        controls["amazon_total_wine_price"])
+    controls["control_source"] = pd.Series(pd.NA, index=controls.index, dtype="string")
+    controls.loc[controls["amazon_total_wine_price"].notna(), "control_source"] = "Amazon / Total Wine"
+    controls.loc[controls["storefront_price"].notna(), "control_source"] = "storefront"
+    controls["control_note"] = controls["Notes"]
+    if controls["item_key"].duplicated().any():
+        raise ValueError("Duplicate brand/product in ground truth; resolve before merging")
+    print("Control file:", path)
+    return controls[["item_key", "item", "brand", "product", "storefront_price",
+                     "amazon_total_wine_price", "control_price", "control_source", "control_note"]]
+
+
+
 # ---------------------------------------------------------------
 # 1. Read raw data
 # ---------------------------------------------------------------
@@ -105,6 +149,7 @@ raw = pd.read_excel(RAW_FILE)
 raw.columns = ["brand", "product", "store", "price_raw", "discount_raw",
                "shelf_raw", "note1", "note2"]
 print("Raw rows:", len(raw))
+controls = load_controls()
 
 # ---------------------------------------------------------------
 # 2. Clean row by row
@@ -174,12 +219,31 @@ data["paid_price"] = data["sale_price"].fillna(data["regular_price"])
 # Was the item found? (has a price)
 data["found"] = data["regular_price"].notna()
 
+# 2b. Attach the per-good control without adding artificial store observations.
+# Matching ignores case and outer whitespace, but preserves flavor/pack size.
+data["item_key"] = data["item"].str.casefold()
+data = data.merge(controls.drop(columns=["item", "brand", "product"]),
+                  on="item_key", how="left", validate="many_to_one")
+data = data.drop(columns="item_key")
+# Products absent from ground truth remain in the data with a missing control.
+data["has_control"] = data["control_price"].notna()
+# Substitute observations are retained for review but excluded from comparisons.
+comparable = data["has_control"] & ~data["substitute"]
+data["regular_premium_pct"] = ((data["regular_price"] / data["control_price"] - 1) * 100).where(comparable)
+data["paid_premium_pct"] = ((data["paid_price"] / data["control_price"] - 1) * 100).where(comparable)
+
+# Allow the script to run before the output directories have been created.
+for output in [LONG_FILE, TABLE_FILE]:
+    Path(output).parent.mkdir(parents=True, exist_ok=True)
+
+print("Rows matched to a control:", data["has_control"].sum())
 print("Clean rows:", len(data))
 print("Rows with a price:", data["found"].sum())
 print("Rows marked as substitute:", data["substitute"].sum())
 
 data.to_csv(LONG_FILE, index=False)
 print("Saved", LONG_FILE)
+
 
 # ---------------------------------------------------------------
 # 3. Make the "product x store" tables
@@ -200,6 +264,13 @@ paid_table = paid_table.reindex(columns=store_order)
 # How many stores have each item
 regular_table["n_stores"] = regular_table[store_order].notna().sum(axis=1)
 
+
+# Include the same reference price alongside store prices in both tables.
+control_by_item = data.drop_duplicates("item").set_index("item")["control_price"]
+for table in [regular_table, paid_table]:
+    table["control_price"] = table.index.get_level_values("item").map(control_by_item)
+
+
 # List of substitutes so you can check them
 subs = data[data["substitute"]][["item", "store", "regular_price", "note"]]
 
@@ -208,6 +279,7 @@ with pd.ExcelWriter(TABLE_FILE) as writer:
     paid_table.to_excel(writer, sheet_name="paid_price")
     subs.to_excel(writer, sheet_name="substitutes_removed", index=False)
     data.to_excel(writer, sheet_name="long_data", index=False)
+    controls.drop(columns="item_key").to_excel(writer, sheet_name="control_data", index=False)
 
 print("Saved", TABLE_FILE)
 print()
