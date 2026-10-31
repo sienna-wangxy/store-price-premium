@@ -1,0 +1,15 @@
+comparison,item,category,log_premium,premium_pct
+small store vs chain,"Blue Ribbon | Narragansett, 12 pk lager cans",beer,0.5413270512151329,71.82856028448607
+small store vs chain,Budweiser | 25 oz bud light,beer,0.07438372012182792,7.722007722007729
+small store vs chain,"Kind | Dark chocolate mocha almond, 12 oz bar",snack bar,0.8769736285333203,140.36144578313255
+small store vs chain,"Kind | Peanut butter dark chocolate, 12 oz bar",snack bar,0.5884557850341432,80.12048192771084
+small store vs chain,"Ponysaurus | Biere de garde, 6 pk",beer,0.26538188852980227,30.392883617494437
+small store vs chain,RXBAR | Peanut butter,snack bar,0.2327046845581925,26.20087336244541
+small store vs chain,Sierra Nevada | Pale ale 12 pk,beer,0.45844953028542124,58.16198292937804
+co-op vs chain,"Blue Ribbon | Narragansett, 12 pk lager cans",beer,0.3813798045801726,46.43036490417547
+co-op vs chain,"Luna | Lemon zest, 1.69",snack bar,0.10591901888373734,11.173184357541889
+co-op vs chain,Pisgah | 6 pack pale ale,beer,0.07416295799488148,7.698229407236323
+co-op vs chain,"Ponysaurus | Biere de garde, 6 pk",beer,-0.03776883953715604,-3.7064492216456357
+co-op vs chain,RXBAR | Bluberry,snack bar,0.22485612338121275,25.214254919504818
+co-op vs chain,RXBAR | Peanut butter,snack bar,0.2667215698364468,30.567685589519655
+co-op vs chain,Sierra Nevada | Pale ale 12 pk,beer,0.12808551509908472,13.665019929553024
