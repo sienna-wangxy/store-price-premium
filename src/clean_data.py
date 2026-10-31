@@ -30,12 +30,14 @@ STORE_NAMES = {
     "bulldega": "Bulldega",
     "whole foods durham": "Whole Foods",
     "food lion": "Food Lion",
+    "harris teeter": "Harris Teeter",
 }
 
 # Store type (please check this grouping is right!)
 STORE_TYPES = {
     "Food Lion": "chain",
     "Whole Foods": "chain",
+    "Harris Teeter": "chain",
     "Durham Co-op": "co-op",
     "Bulldega": "small store",
     "Gazelle": "small store",
@@ -248,7 +250,7 @@ print("Saved", LONG_FILE)
 # ---------------------------------------------------------------
 # 3. Make the "product x store" tables
 # ---------------------------------------------------------------
-store_order = ["Bulldega", "Durham Co-op", "Food Lion", "Gazelle", "Whole Foods"]
+store_order = ["Bulldega", "Durham Co-op", "Food Lion", "Gazelle", "Harris Teeter", "Whole Foods"]
 
 # Only exact matches (substitutes removed) go into the main table
 exact = data[data["found"] & ~data["substitute"]]

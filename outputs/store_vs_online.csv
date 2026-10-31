@@ -1,0 +1,7 @@
+store,store_type,n_products,mean_premium_pct,ci_low_pct,ci_high_pct,effect_size_dz,t,p_value,p_holm,significant
+Bulldega,small store,8,89.602,31.343,173.701,1.457,4.121,0.004,0.022,True
+Durham Co-op,co-op,12,35.784,11.85,64.84,1.002,3.472,0.005,0.022,True
+Food Lion,chain,5,9.875,-8.002,31.225,0.658,1.472,0.215,0.366,False
+Gazelle,small store,2,11.371,,,,,,,
+Harris Teeter,chain,8,29.602,-1.916,71.249,0.778,2.2,0.064,0.191,False
+Whole Foods,chain,8,15.313,-8.185,44.825,0.523,1.479,0.183,0.366,False

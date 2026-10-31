@@ -1,0 +1,11 @@
+store_A,store_B,shared_products,A_vs_B_pct,t,p_value,p_holm,significant
+Bulldega,Durham Co-op,8,33.633,5.729,0.001,0.006,True
+Bulldega,Food Lion,2,,,,,
+Bulldega,Harris Teeter,4,80.489,8.652,0.003,0.026,True
+Bulldega,Whole Foods,5,74.79,5.695,0.005,0.028,True
+Durham Co-op,Food Lion,4,20.228,3.02,0.057,0.17,False
+Durham Co-op,Harris Teeter,7,18.906,2.89,0.028,0.111,False
+Durham Co-op,Whole Foods,8,24.986,4.306,0.004,0.026,True
+Food Lion,Harris Teeter,5,-1.092,-0.138,0.897,0.897,False
+Food Lion,Whole Foods,3,7.133,6.62,0.022,0.11,False
+Harris Teeter,Whole Foods,6,8.449,1.297,0.251,0.502,False
