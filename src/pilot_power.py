@@ -3,13 +3,21 @@ pilot_power.py
 Use the pilot data to estimate the price premium, then do a power analysis
 to find how many products we need.
 
-Run from the project folder (after clean_data.py):
-    python src/pilot_power.py
+Plan paired store-versus-reference price comparisons using relative prices.
 
-Input:  data/clean/prices_long.csv
-Output: outputs/pilot_premiums.csv
-        outputs/power_table.csv
+Run after clean_data.py from the project root:
+    python src/pilot_power.py
+Dependencies: numpy, pandas, scipy.
+Input: data/clean/prices_long.csv
+Outputs: outputs/pilot_premiums.csv, outputs/power_table.csv
+
+The target is a geometric mean premium of 50% versus a null premium of 0%.
+This does NOT plan a test proving that the premium exceeds 50%.
+Two-sided tests match analysis.py. Bonferroni planning is conservative for
+its Holm-adjusted final tests. Power targets apply to each individual store,
+not the probability of detecting effects at every store simultaneously.
 """
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
