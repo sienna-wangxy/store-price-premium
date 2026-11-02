@@ -1,0 +1,12 @@
+Two-sided store-vs-reference tests; Holm family alpha = 0.05.
+        store  n_products  premium_pct   p_holm                                          outcome
+     Bulldega           8    89.601620 0.022276              Significantly higher than reference
+ Durham Co-op          12    35.784335 0.022276              Significantly higher than reference
+    Food Lion           5     9.874801 0.365595 No statistically significant difference detected
+      Gazelle           2    11.370703      NaN         Descriptive only; no valid test reported
+Harris Teeter           8    29.602404 0.191060 No statistically significant difference detected
+  Whole Foods           8    15.313318 0.365595 No statistically significant difference detected
+
+No significant difference does not establish equivalent prices.
+50% is a planning effect, not the null or significance cutoff.
+Individual 95% intervals are not adjusted for multiple comparisons.
