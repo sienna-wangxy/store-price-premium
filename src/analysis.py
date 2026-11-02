@@ -56,6 +56,13 @@ for store, group in data.groupby("store"):
         row["effect_size_dz"] = mean / sd
         row["t"] = t
         row["p_value"] = p
+        # Assumption check: are the log premiums roughly normal?
+        # Shapiro-Wilk: p > 0.05 means no evidence against normality
+        w, p_normal = stats.shapiro(x)
+        row["shapiro_W"] = w
+        row["shapiro_p"] = p_normal
+        # Robustness check: Wilcoxon signed-rank test does NOT assume normality
+        row["wilcoxon_p"] = stats.wilcoxon(x).pvalue
     results.append(row)
 
 results = pd.DataFrame(results)
@@ -73,6 +80,8 @@ print("=== Each store vs online price (regular shelf price) ===")
 print(results.to_string(index=False))
 print()
 print("Stores with fewer than", MIN_PRODUCTS, "products are only described, not tested.")
+print("shapiro_p > 0.05: no evidence against normality (t-test assumption OK).")
+print("With only 5-12 products per store, this check has low power, so also look at the data.")
 
 results.to_csv("outputs/store_vs_online.csv", index=False)
 print("Saved outputs/store_vs_online.csv")

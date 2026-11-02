@@ -1,7 +1,7 @@
-store,store_type,n_products,mean_premium_pct,ci_low_pct,ci_high_pct,effect_size_dz,t,p_value,p_holm,significant
-Bulldega,small store,8,89.602,31.343,173.701,1.457,4.121,0.004,0.022,True
-Durham Co-op,co-op,12,35.784,11.85,64.84,1.002,3.472,0.005,0.022,True
-Food Lion,chain,5,9.875,-8.002,31.225,0.658,1.472,0.215,0.366,False
-Gazelle,small store,2,11.371,,,,,,,
-Harris Teeter,chain,8,29.602,-1.916,71.249,0.778,2.2,0.064,0.191,False
-Whole Foods,chain,8,15.313,-8.185,44.825,0.523,1.479,0.183,0.366,False
+store,store_type,n_products,mean_premium_pct,ci_low_pct,ci_high_pct,effect_size_dz,t,p_value,shapiro_W,shapiro_p,wilcoxon_p,p_holm,significant
+Bulldega,small store,8,81.711,32.884,148.478,1.596,4.513,0.003,0.949,0.702,0.008,0.011,True
+Durham Co-op,co-op,12,31.99,13.582,53.382,1.174,4.067,0.002,0.912,0.228,0.004,0.009,True
+Food Lion,chain,5,9.875,-8.002,31.225,0.658,1.472,0.215,0.946,0.709,0.375,0.298,False
+Gazelle,small store,2,11.371,,,,,,,,,,
+Harris Teeter,chain,8,24.208,1.041,52.688,0.878,2.483,0.042,0.899,0.282,0.039,0.126,False
+Whole Foods,chain,8,10.514,-4.487,27.871,0.573,1.621,0.149,0.881,0.193,0.297,0.298,False
