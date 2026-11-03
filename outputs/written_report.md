@@ -1,7 +1,7 @@
 ## Beers and Bars, how prices of goods vary across grocery stores in Durham
 
 ### Abstract:
-
+Common knowledge tells you to assume high-cost grocery stores will always have the highest costs of goods, while the opposite is true for low-cost sellers. This study investigates whether this is true for Durham, NC storefronts. This study compares costs of goods you can find in most stores (bars and beers) and evalutes their relative costs, compared to control costs from the manufacturer or recommended seller (when the manufacturer doesn't directly sell goods). While challenging to collect a large sample of data because the variety and brands of goods varies across storefronts more than expected, the study did show 
 
 ### Background & Motivation:
 Entering holiday season, our team began observing price upcharges in stores across Durham county. Weeks before Halloween, candy was advertised at the fronts of stores and as we head into November, pumpkins are sold en masse. We became curious: how do prices vary across stores in the Durham area. Are you really getting a better deal at "cheaper" grocery stores, and where can you really find the best bang for your buck? We surveyed common goods at grocery stores, gas stations, and general goods stores across the Durham area to compare prices and see whether there was significant variation between them and their original cost. We suspected they would be most expensive at the most expensive storefronts and cheapest on the manufacturer websites. 
