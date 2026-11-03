@@ -1,7 +1,5 @@
 """Plan paired store-versus-reference price comparisons using relative prices.
 
-Run after clean_data.py from the project root:
-    python src/pilot_power.py
 Dependencies: numpy, pandas, scipy.
 Input: data/clean/prices_long.csv
 Outputs: outputs/pilot_premiums.csv, outputs/power_table.csv
